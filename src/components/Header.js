@@ -14,19 +14,19 @@ const Header = () => {
 
   return (
     <header>
+      <div>
+        <img src={logo} alt="logo" />
+      </div>
       <MediaQuery maxWidth={768}>
         {matches =>
           matches ? (
             <>
-              <div>
-                <img src={logo} alt="logo" />
-              </div>
               {isMenuOpen ? (
-			    <Button onClick={handleMenuOpen} isMenuOpen>
+			    <Button type="button" onClick={handleMenuOpen} isMenuOpen>
 				  <FontAwesomeIcon icon={faTimes} size='1x' />
 				</Button>
 				) : (
-				<Button onClick={handleMenuOpen}>
+				<Button type="button" onClick={handleMenuOpen}>
 				  <FontAwesomeIcon icon={faAlignRight} size='1x' />
 				</Button>
 				)
@@ -41,6 +41,9 @@ const Header = () => {
           )
         }
         </MediaQuery>
+        <Button type="button">
+          Connect Wallet
+        </Button>
     </header>
 
   )
