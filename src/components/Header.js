@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import MediaQuery from 'react-responsive/types/Component';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAlignRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 import logo from '../images/logo.png'
+import Button from './Button';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuOpen = () => {
 		setIsMenuOpen(!isMenuOpen);
 	};
+    
   return (
     <header>
       <MediaQuery maxWidth={768}>
@@ -18,11 +22,11 @@ const Header = () => {
               </div>
               {isMenuOpen ? (
 			    <Button onClick={handleMenuOpen} isMenuOpen>
-				  <FontAwesomeIcons icon={faTimes} size='1x' />
+				  <FontAwesomeIcon icon={faTimes} size='1x' />
 				</Button>
 				) : (
 				<Button onClick={handleMenuOpen}>
-				  <FontAwesomeIcons icon={faAlignRight} size='1x' />
+				  <FontAwesomeIcon icon={faAlignRight} size='1x' />
 				</Button>
 				)
               }
