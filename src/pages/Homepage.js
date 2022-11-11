@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Wallet from '../components/Wallet';
 
 const Homepage = () => {
+    const [modal, setModal] = useState("inactive");
+
   return (
-    <div>Homepage</div>
+    <div>
+       {modal === "wallet-active" && (
+		  <Wallet setModal={setModal} />
+		)}
+    </div>
   )
 }
 
