@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAlignRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 import logo from '../images/logo.png'
 import Button from './Button';
-import MobileMenu from './MobileMenu';
+import Navbar from './Navbar';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,12 +31,12 @@ const Header = () => {
 				</Button>
 				)
               }
-              <MobileMenu menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen}/>
+              <Navbar menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen}/>
             </>
           ) :
           (
             <>
-              <Navbar />
+             <Navbar menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen}/>
             </>
           )
         }
