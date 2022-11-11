@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAlignRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 import logo from '../images/logo.png'
 import Button from './Button';
+import MobileMenu from './MobileMenu';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuOpen = () => {
 		setIsMenuOpen(!isMenuOpen);
 	};
-    
+
   return (
     <header>
       <MediaQuery maxWidth={768}>
@@ -30,7 +31,7 @@ const Header = () => {
 				</Button>
 				)
               }
-              <MobileMenu />
+              <MobileMenu menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen}/>
             </>
           ) :
           (
