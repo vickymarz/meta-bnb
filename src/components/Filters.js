@@ -45,15 +45,15 @@ const Filters = () => {
 
   return (
     <div>
-        <ul>
-            {listFilters}
+      <ul>
+        {listFilters}
         <li>
-            <span>Location</span>
-            <span>
-                <img src={settings} alt="filter" />
-            </span>
+          <span>Location</span>
+          <span>
+            <img src={settings} alt="filter" />
+          </span>
         </li>
-        </ul>
+      </ul>
     </div>
   )
 }

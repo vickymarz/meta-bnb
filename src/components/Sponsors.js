@@ -6,15 +6,15 @@ import opensea from '../images/opensea.png'
 const Sponsors = () => {
   return (
     <div>
-        <span>
-            <img src={mbtoken} alt="mbtoken" />
-        </span>
-        <span>
-            <img src={meta} alt="metamask" />
-        </span>
-        <span>
-            <img src={opensea} alt="opensea" />
-        </span>
+      <span>
+        <img src={mbtoken} alt="mbtoken" />
+      </span>
+      <span>
+        <img src={meta} alt="metamask" />
+      </span>
+      <span>
+        <img src={opensea} alt="opensea" />
+      </span>
     </div>
   )
 }
