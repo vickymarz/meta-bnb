@@ -8,7 +8,6 @@ import Locations from "./pages/Locations";
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Header />,
     errorElement: <ErrorPage />,
     children: [
       {

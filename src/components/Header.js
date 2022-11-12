@@ -6,7 +6,7 @@ import logo from '../images/logo.png'
 import Button from './Button';
 import Navbar from './Navbar';
 
-const Header = () => {
+const Header = ({ setModal }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuOpen = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -41,7 +41,7 @@ const Header = () => {
           )
         }
         </MediaQuery>
-        <Button type="button">
+        <Button type="button" onClick={() => setModal('modal-active')}>
           Connect Wallet
         </Button>
     </header>
