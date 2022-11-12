@@ -13,8 +13,8 @@ const Header = ({ setModal }) => {
 	};
 
   return (
-    <header>
-      <div>
+    <header className='w-full h-16 md:h-24 fixed top-0 left-0 right-0 px-5 py-4 md:px-20 bg-whites flex justify-between items-center z-10'>
+      <div className='w-36 md:w-56'>
         <img src={logo} alt="logo" />
       </div>
       <MediaQuery maxWidth={768}>
@@ -22,16 +22,18 @@ const Header = ({ setModal }) => {
           matches ? (
             <>
               {isMenuOpen ? (
-			    <Button type="button" onClick={handleMenuOpen} isMenuOpen>
-				  <FontAwesomeIcon icon={faTimes} size='1x' />
-				</Button>
-				) : (
-				<Button type="button" onClick={handleMenuOpen}>
-				  <FontAwesomeIcon icon={faAlignRight} size='1x' />
-				</Button>
-				)
+			          <Button type="button" onClick={handleMenuOpen} isMenuOpen>
+				          <FontAwesomeIcon icon={faTimes} size='1x' />
+				        </Button>
+				      ) : (
+				        <Button type="button" onClick={handleMenuOpen}>
+				          <FontAwesomeIcon icon={faAlignRight} size='1x' className="text-pink"/>
+				        </Button>
+				      )
               }
-              <Navbar menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen}/>
+              {
+                isMenuOpen && <Navbar menuOpen={isMenuOpen} setModal={setModal}/>
+              }
             </>
           ) :
           (
@@ -41,9 +43,6 @@ const Header = ({ setModal }) => {
           )
         }
         </MediaQuery>
-        <Button type="button" onClick={() => setModal('modal-active')}>
-          Connect Wallet
-        </Button>
     </header>
 
   )

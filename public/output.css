@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -559,6 +559,103 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-7 {
+  top: 1.75rem;
+}
+
+.top-40 {
+  top: 10rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.top-32 {
+  top: 8rem;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.mb-40 {
+  margin-bottom: 10rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-36 {
+  width: 9rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-whites {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.text-pink {
+  --tw-text-opacity: 1;
+  color: rgb(160 34 121 / var(--tw-text-opacity));
+}
+
+.filter {
+  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 *,
 ::before,
 ::after {
@@ -569,7 +666,7 @@ video {
 
 html {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   font-weight: 500;
 }
@@ -578,6 +675,7 @@ body {
   width: 100%;
   min-height: 100%;
   background-color: #fff;
+  position: relative;
 }
 
 img {
@@ -587,4 +685,23 @@ img {
 
 a {
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .md\:top-44 {
+    top: 11rem;
+  }
+
+  .md\:h-24 {
+    height: 6rem;
+  }
+
+  .md\:w-56 {
+    width: 14rem;
+  }
+
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }

@@ -14,7 +14,7 @@ const Homepage = () => {
   return (
     <>
       <Header setModal={setModal} />
-        <main>
+        <main className='relative top-32 md:top-44'>
           <Intro />
           <Sponsors />
           <section>

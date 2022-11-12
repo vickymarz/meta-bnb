@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
-const Navbar = () => {
+const Navbar = ({setModal}) => {
     const nav = [
         {
           id: 1,
@@ -41,6 +42,9 @@ const Navbar = () => {
       <ul>
         {navigation}
       </ul>
+      <Button type="button" onClick={() => setModal('modal-active')}>
+        Connect Wallet
+      </Button>
     </nav>
   )
 }
