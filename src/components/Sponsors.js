@@ -5,14 +5,14 @@ import opensea from '../images/opensea.png'
 
 const Sponsors = () => {
   return (
-    <div>
-      <span>
+    <div className='bg-pink flex justify-between items-center px-5 md:px-20 py-4 gap-2.5 mt-16 mb-14'>
+      <span className='w-26 md:w-52'>
         <img src={mbtoken} alt="mbtoken" />
       </span>
-      <span>
+      <span className='w-26 md:w-52'>
         <img src={meta} alt="metamask" />
       </span>
-      <span>
+      <span className='w-26 md:w-52'>
         <img src={opensea} alt="opensea" />
       </span>
     </div>
