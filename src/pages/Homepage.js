@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -13,26 +13,26 @@ const Homepage = () => {
 
   return (
     <>
-        <Header setModal={setModal} />
+      <Header setModal={setModal} />
         <main>
-            <Intro />
-            <Sponsors />
-            <section>
-                <h2>Inspiration for your next adventure</h2>
-                 <Places />
-            </section>
-            <section>
-              <div>
-                <h2>Metabnb NFTs</h2>
-                <p>Discover our NFT gift cards collection. Loyal customers gets amazing gift cards which are traded as NFTs. These NFTs gives our cutomer access to loads of our exclusive services.</p>
-                 <Button>
-                  Learn more
-                 </Button>
-              </div>
-              <div>
-                <img src={card} alt="nft gift card" />
-              </div>
-            </section>
+          <Intro />
+          <Sponsors />
+          <section>
+            <h2>Inspiration for your next adventure</h2>
+            <Places />
+          </section>
+          <section>
+            <div>
+              <h2>Metabnb NFTs</h2>
+              <p>Discover our NFT gift cards collection. Loyal customers gets amazing gift cards which are traded as NFTs. These NFTs gives our cutomer access to loads of our exclusive services.</p>
+              <Button>
+                Learn more
+              </Button>
+            </div>
+            <div>
+              <img src={card} alt="nft gift card" />
+            </div>
+          </section>
         </main>
         <Footer />
 
