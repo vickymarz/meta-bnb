@@ -5,6 +5,8 @@ module.exports = {
     colors: {
       'pink': '#A02279',
       'whites': '#ffffff',
+      'blackk': '#434343',
+      'grayy': '#B8B8B8'
     },
     extend: {},
   },
