@@ -13,7 +13,7 @@ const Header = ({ setModal }) => {
 	};
 
   return (
-    <header className='w-full h-16 md:h-24 fixed top-0 left-0 right-0 px-5 py-5 md:px-20 bg-whites flex justify-between items-center z-10'>
+    <header className='w-full h-20 md:h-24 fixed top-0 left-0 right-0 px-5 py-5 md:px-20 bg-whites flex justify-between items-center z-10'>
       <div className='w-36 md:w-56'>
         <img src={logo} alt="logo" />
       </div>
@@ -23,22 +23,22 @@ const Header = ({ setModal }) => {
             <>
               {isMenuOpen ? (
 			          <Button type="button" onClick={handleMenuOpen} isMenuOpen>
-				          <FontAwesomeIcon icon={faTimes} size='1x' />
+				          <FontAwesomeIcon icon={faTimes} size='2x' className="text-pink"/>
 				        </Button>
 				      ) : (
 				        <Button type="button" onClick={handleMenuOpen}>
-				          <FontAwesomeIcon icon={faAlignRight} size='1x' className="text-pink"/>
+				          <FontAwesomeIcon icon={faAlignRight} size='2x' className="text-pink"/>
 				        </Button>
 				      )
               }
-              {
-                isMenuOpen && <Navbar menuOpen={isMenuOpen} setModal={setModal}/>
-              }
+
+              <Navbar menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} setModal={setModal}/>
+
             </>
           ) :
           (
             <>
-             <Navbar menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen}/>
+             <Navbar />
             </>
           )
         }
