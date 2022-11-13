@@ -38,13 +38,15 @@ const Navbar = ({setModal}) => {
       ));
 
   return (
-    <nav>
-      <ul>
+    <nav className='flex justify-between items-center gap-x-44'>
+      <ul className='flex justify-between items-center gap-x-12 text-blackk text-xl'>
         {navigation}
       </ul>
-      <Button type="button" onClick={() => setModal('modal-active')}>
+      <li>
+      <Button type="button" onClick={() => setModal('modal-active')} className='rounded-lg bg-pink  px-7 py-3.5'>
         Connect Wallet
       </Button>
+      </li>
     </nav>
   )
 }
