@@ -6,7 +6,8 @@ module.exports = {
       'pink': '#A02279',
       'whites': '#ffffff',
       'blackk': '#434343',
-      'grayy': '#B8B8B8'
+      'grayy': '#B8B8B8',
+      'lightgray': '#d7d7d7'
     },
     extend: {},
   },

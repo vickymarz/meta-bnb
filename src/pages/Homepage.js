@@ -17,8 +17,8 @@ const Homepage = () => {
         <main className='relative top-32 md:top-44'>
           <Intro />
           <Sponsors />
-          <section>
-            <h2>Inspiration for your next adventure</h2>
+          <section className='px-5 md:px-20'>
+            <h2 className='text-black px-5 text-2xl md:text-5xl font-bold text-center mb-11'>Inspiration for your next adventure</h2>
             <Places />
           </section>
           <section>
