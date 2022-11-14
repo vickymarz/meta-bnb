@@ -19,7 +19,7 @@ const Homepage = () => {
     useEffect(() => {
         const newDatas = datas.slice(0, 8)
         setDatas(newDatas)
-    }, []);
+    }, [datas]);
 
     const handleModal = () => {
       setModal(!modal)
