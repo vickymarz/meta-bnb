@@ -1,15 +1,31 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./components/ErrorPage";
 import Homepage from "./pages/Homepage";
 import Locations from "./pages/Locations";
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <Homepage />,
+
+      },
+      {
+        path: '/locations',
+        element: <Locations />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" exact element={<Homepage />} />
-        <Route path="/locations" element={<Locations />} />
-      </Routes>
+      <RouterProvider router={router} />
     </div>
   );
 }
