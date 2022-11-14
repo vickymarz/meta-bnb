@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -8,9 +8,16 @@ import Sponsors from '../components/Sponsors';
 import Wallet from '../components/Wallet';
 import card from '../images/nfts.png';
 import MediaQuery from 'react-responsive'
+import locations from '../data';
 
 const Homepage = () => {
     const [modal, setModal] = useState("inactive");
+    const [datas, setDatas] = useState(locations);
+
+    useEffect(() => {
+        const newDatas = datas.slice(0, 8)
+        setDatas(newDatas)
+    }, []);
 
   return (
     <>
@@ -20,7 +27,7 @@ const Homepage = () => {
           <Sponsors />
           <section className='px-5 md:px-20'>
             <h2 className='text-black px-5 text-2xl md:text-5xl font-bold text-center mb-11'>Inspiration for your next adventure</h2>
-            <Places />
+            <Places datas={datas}/>
           </section>
           <section className='mt-6 md:mt-12 bg-pink px-5 md:px-20 py-12 md:py-24 md:flex justify-between items-center gap-32'>
             <div className='text-light'>

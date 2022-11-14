@@ -38,23 +38,21 @@ const Filters = () => {
       ];
 
       const listFilters = filters.map(({id, text}) => (
-        <li key={id}>
+        <li key={id} className='text-blackk text-xl'>
             {text}
         </li>
       ))
 
   return (
-    <div>
-      <ul>
+      <ul className='px-5 md:px-20 flex flex-col md:flex-row justify-between items-center gap-y-2 mb-16'>
         {listFilters}
-        <li>
+        <li className='text-blackk text-xl rounded-lg px-4 py-4 border border-solid border-lightergray flex justify-between items-center gap-x-12'>
           <span>Location</span>
           <span>
             <img src={settings} alt="filter" />
           </span>
         </li>
       </ul>
-    </div>
   )
 }
 

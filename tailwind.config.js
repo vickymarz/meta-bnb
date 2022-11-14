@@ -10,7 +10,8 @@ module.exports = {
       'lightgray': '#d7d7d7',
       'light': '#ffffff',
       'darkk': '#1d1d1e',
-      'skylight': '#f1f3f9'
+      'skylight': '#f1f3f9',
+      'lightergray': '#b4b4b4'
     },
     extend: {},
   },
