@@ -6,7 +6,7 @@ import logo from '../images/logo.png'
 import Button from './Button';
 import Navbar from './Navbar';
 
-const Header = ({ setModal }) => {
+const Header = ({ handleModal }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuOpen = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -32,13 +32,13 @@ const Header = ({ setModal }) => {
 				      )
               }
 
-              <Navbar menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} setModal={setModal}/>
+              <Navbar menuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} handleModal={handleModal}/>
 
             </>
           ) :
           (
             <>
-             <Navbar />
+             <Navbar handleModal={handleModal}/>
             </>
           )
         }

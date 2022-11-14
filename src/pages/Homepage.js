@@ -11,17 +11,24 @@ import MediaQuery from 'react-responsive'
 import locations from '../data';
 
 const Homepage = () => {
-    const [modal, setModal] = useState("inactive");
+    const [modal, setModal] = useState(false);
     const [datas, setDatas] = useState(locations);
+
+    console.log(modal)
 
     useEffect(() => {
         const newDatas = datas.slice(0, 8)
         setDatas(newDatas)
     }, []);
 
+    const handleModal = () => {
+      setModal(!modal)
+    }
+
   return (
     <>
-      <Header setModal={setModal} />
+
+      <Header handleModal={handleModal} />
         <main className='relative top-32 md:top-44'>
           <Intro />
           <Sponsors />
@@ -61,7 +68,7 @@ const Homepage = () => {
         </main>
         <Footer />
 
-       {modal === "wallet-active" && (
+       {modal && (
 		  <Wallet setModal={setModal} />
 		)}
     </>

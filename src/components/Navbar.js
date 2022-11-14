@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Button from './Button';
 
-const Navbar = ({setModal, menuOpen, handleMenuOpen}) => {
+const Navbar = ({handleModal, menuOpen, handleMenuOpen}) => {
     const nav = [
         {
           id: 1,
@@ -43,7 +43,7 @@ const Navbar = ({setModal, menuOpen, handleMenuOpen}) => {
       <ul className='flex flex-col md:flex-row justify-center md:justify-between items-center md:gap-x-12 gap-y-9 md:gap-y-0 text-light md:text-blackk text-2xl md:text-xl mt-16 md:mt-0'>
         {navigation}
       </ul>
-      <Button type="button" onClick={() => setModal('modal-active')} className='rounded-lg bg-light text-pink md:text-light md:bg-pink px-7 py-3.5 text-2xl md:text-base'>
+      <Button type="button" onClick={handleModal} className='rounded-lg bg-light text-pink md:text-light md:bg-pink px-7 py-3.5 text-2xl md:text-base'>
         Connect Wallet
       </Button>
     </nav>
