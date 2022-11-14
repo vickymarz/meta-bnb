@@ -7,6 +7,7 @@ const Input = ({
   placeholder,
   value,
   innerRef,
+  className,
 }) => (
   <>
     <input
@@ -16,6 +17,7 @@ const Input = ({
       placeholder={placeholder}
       value={value}
       ref={innerRef}
+      className={className}
     />
   </>
 );

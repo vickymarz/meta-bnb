@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;500;600;700&display=swap');
 *,
 ::before,
 ::after {
@@ -11,16 +12,17 @@
 }
 
 html {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-family: 'Red Rose', cursive;
+  font-size: 16px;
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 body {
   width: 100%;
   min-height: 100%;
   background-color: #fff;
+  position: relative;
 }
 
 img {
@@ -30,4 +32,12 @@ img {
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  color: white;
 }

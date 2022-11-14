@@ -4,21 +4,29 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Places from '../components/Places';
 import Wallet from '../components/Wallet';
+import locations from '../data';
 
 const Locations = () => {
-  const [modal, setModal] = useState("inactive");
+  const [modal, setModal] = useState(false);
+  const [datas] = useState(locations);
+
+  const handleModal = () => {
+    setModal(!modal)
+  }
 
   return (
     <>
-      <Header setModal={setModal} />
+      <Header setModal={setModal} handleModal={handleModal} />
+      <div className='relative top-32 lg:top-44'>
       <Filters />
-      <section>
-        <Places />
+      <section className='px-5 lg:px-20'>
+        <Places datas={datas}/>
       </section>
       <Footer />
-      {modal === "wallet-active" && (
+      {modal && (
 		  <Wallet setModal={setModal} />
 		)}
+      </div>
     </>
   )
 }
