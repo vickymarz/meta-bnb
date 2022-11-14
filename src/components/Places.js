@@ -8,7 +8,7 @@ const Places = ({datas}) => {
     ))
 
   return (
-    <div className='md:grid md:grid-cols-4 md:gap-6'>
+    <div className='lg:grid lg:grid-cols-4 lg:gap-6'>
         {displayDatas}
     </div>
   )

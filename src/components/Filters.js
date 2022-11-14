@@ -44,7 +44,7 @@ const Filters = () => {
       ))
 
   return (
-      <ul className='px-5 md:px-20 flex flex-col md:flex-row justify-between items-center gap-y-2 mb-16'>
+      <ul className='px-5 lg:px-20 flex flex-col lg:flex-row justify-between items-center gap-y-2 mb-16'>
         {listFilters}
         <li className='text-blackk text-xl rounded-lg px-4 py-4 border border-solid border-lightergray flex justify-between items-center gap-x-12'>
           <span>Location</span>

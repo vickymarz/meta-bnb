@@ -29,17 +29,17 @@ const Homepage = () => {
     <>
 
       <Header handleModal={handleModal} />
-        <main className='relative top-32 md:top-44'>
+        <main className='relative top-32 lg:top-44'>
           <Intro />
           <Sponsors />
-          <section className='px-5 md:px-20'>
-            <h2 className='text-black px-5 text-2xl md:text-5xl font-bold text-center mb-11'>Inspiration for your next adventure</h2>
+          <section className='px-5 lg:px-20'>
+            <h2 className='text-black px-5 text-2xl lg:text-5xl font-bold text-center mb-11'>Inspiration for your next adventure</h2>
             <Places datas={datas}/>
           </section>
-          <section className='mt-6 md:mt-12 bg-pink px-5 md:px-20 py-12 md:py-24 md:flex justify-between items-center gap-32'>
+          <section className='mt-6 lg:mt-12 bg-pink px-5 lg:px-20 py-12 lg:py-24 lg:flex justify-between items-center gap-32'>
             <div className='text-light'>
-              <h2 className='text-4xl md:text-5xl font-bold mb-5 md:mb-9'>Metabnb NFTs</h2>
-              <MediaQuery maxWidth={768}>
+              <h2 className='text-4xl lg:text-5xl font-bold mb-5 lg:mb-9'>Metabnb NFTs</h2>
+              <MediaQuery maxWidth={1024}>
             {
             matches =>
               matches && (
@@ -50,11 +50,11 @@ const Homepage = () => {
             }
           </MediaQuery>
               <p className='text-lg leading-9'>Discover our NFT gift cards collection. Loyal customers gets amazing gift cards which are traded as NFTs. These NFTs gives our cutomer access to loads of our exclusive services.</p>
-              <Button className='rounded-lg bg-light text-pink px-8 py-3.5 mt-4 md:mt-14'>
+              <Button className='rounded-lg bg-light text-pink px-8 py-3.5 mt-4 lg:mt-14'>
                 Learn more
               </Button>
             </div>
-            <MediaQuery minWidth={768}>
+            <MediaQuery minWidth={1024}>
             {
             matches =>
               matches && (

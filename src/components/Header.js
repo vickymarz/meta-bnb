@@ -13,11 +13,11 @@ const Header = ({ handleModal }) => {
 	};
 
   return (
-    <header className='w-full h-20 md:h-24 fixed top-0 left-0 right-0 px-5 py-5 md:px-20 bg-whites flex justify-between items-center z-10'>
-      <div className='w-36 md:w-56'>
+    <header className='w-full h-20 lg:h-24 fixed top-0 left-0 right-0 px-5 py-5 lg:px-20 bg-whites flex justify-between items-center z-10'>
+      <div className='w-36 lg:w-56'>
         <img src={logo} alt="logo" />
       </div>
-      <MediaQuery maxWidth={768}>
+      <MediaQuery maxWidth={1024}>
         {matches =>
           matches ? (
             <>

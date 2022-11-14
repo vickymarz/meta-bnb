@@ -26,6 +26,11 @@ const Navbar = ({handleModal, menuOpen, handleMenuOpen}) => {
         },
       ];
 
+      const handleFunctions = () => {
+        handleMenuOpen()
+        handleModal()
+      }
+
       const navigation = nav.map(({ id, path, children }) => (
         <li key={id}>
           <Link
@@ -39,11 +44,11 @@ const Navbar = ({handleModal, menuOpen, handleMenuOpen}) => {
       ));
 
   return (
-    <nav className={`flex flex-col md:flex-row md:justify-center md:justify-between items-center md:gap-x-44 gap-y-24 md:gap-y-0 fixed md:static w-full h-full md:w-max md:h-max top-16 ${menuOpen ? 'right-0' : '-right-full'} bottom-0 bg-pink md:bg-light z-8 transition-all duration-1000 ease-in-out md:transition-none`}>
-      <ul className='flex flex-col md:flex-row justify-center md:justify-between items-center md:gap-x-12 gap-y-9 md:gap-y-0 text-light md:text-blackk text-2xl md:text-xl mt-16 md:mt-0'>
+    <nav className={`flex flex-col lg:flex-row lg:justify-center lg:justify-between items-center lg:gap-x-44 gap-y-24 lg:gap-y-0 fixed lg:static w-full h-full lg:w-max lg:h-max top-16 ${menuOpen ? 'right-0' : '-right-full'} bottom-0 bg-pink lg:bg-light z-8 transition-all duration-1000 ease-in-out lg:transition-none`}>
+      <ul className='flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:gap-x-12 gap-y-9 lg:gap-y-0 text-light lg:text-blackk text-2xl lg:text-xl mt-16 lg:mt-0'>
         {navigation}
       </ul>
-      <Button type="button" onClick={handleModal} className='rounded-lg bg-light text-pink md:text-light md:bg-pink px-7 py-3.5 text-2xl md:text-base'>
+      <Button type="button" onClick={handleFunctions} className='rounded-lg bg-light text-pink lg:text-light lg:bg-pink px-7 py-3.5 text-2xl lg:text-base'>
         Connect Wallet
       </Button>
     </nav>

@@ -9,7 +9,7 @@ import arrow from '../images/arrow-right.png'
 const Wallet = ({setModal}) => {
     return (
         <div className={`${setModal ? 'fixed top-0 right-0 left-0 bottom-0 w-screen w-screen z-20 bg-dimwhite' : 'hidden'}`}>
-            <div className='w-2/5 ml-auto mr-auto relative mt-44 flex flex-col bg-light py-6 rounded-2xl'>
+            <div className='w-11/12 lg:w-2/5 ml-auto mr-auto relative mt-44 flex flex-col bg-light py-6 rounded-2xl'>
                 <div className='flex justify-between items-center border-b border-solid border-midgray pb-6 px-8'>
                   <h2 className='font-bold text-darkgray text-2xl'>Connect Wallet</h2>
                   <Button type='button' onClick={() => setModal(false)}>
