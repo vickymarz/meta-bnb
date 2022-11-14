@@ -11,17 +11,17 @@ const Navbar = ({handleModal, menuOpen, handleMenuOpen}) => {
         },
         {
           id: 2,
-          path: 'locations',
+          path: '/locations',
           children: 'Place to stay',
         },
         {
           id: 3,
-          path: 'nfts',
+          path: '/nfts',
           children: 'NFTs',
         },
         {
           id: 4,
-          path: 'community',
+          path: '/community',
           children: 'Community',
         },
       ];
@@ -36,7 +36,6 @@ const Navbar = ({handleModal, menuOpen, handleMenuOpen}) => {
           <Link
             to={path}
             onClick={handleMenuOpen}
-            end
           >
             {children}
           </Link>
