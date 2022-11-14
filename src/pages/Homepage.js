@@ -14,12 +14,10 @@ const Homepage = () => {
     const [modal, setModal] = useState(false);
     const [datas, setDatas] = useState(locations);
 
-    console.log(modal)
-
     useEffect(() => {
         const newDatas = datas.slice(0, 8)
         setDatas(newDatas)
-    }, [datas]);
+    }, [locations]);
 
     const handleModal = () => {
       setModal(!modal)

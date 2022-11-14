@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Button from './Button';
+import MediaQuery from 'react-responsive';
 
 const Navbar = ({handleModal, menuOpen, handleMenuOpen}) => {
     const nav = [
@@ -47,9 +48,19 @@ const Navbar = ({handleModal, menuOpen, handleMenuOpen}) => {
       <ul className='flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:gap-x-12 gap-y-9 lg:gap-y-0 text-light lg:text-blackk text-2xl lg:text-xl mt-16 lg:mt-0'>
         {navigation}
       </ul>
-      <Button type="button" onClick={handleFunctions} className='rounded-lg bg-light text-pink lg:text-light lg:bg-pink px-7 py-3.5 text-2xl lg:text-base'>
-        Connect Wallet
-      </Button>
+      <MediaQuery maxWidth={1024}>
+      { matches =>
+         matches ? (
+          <Button type="button" onClick={handleFunctions} className='rounded-lg bg-light text-pink lg:text-light lg:bg-pink px-7 py-3.5 text-2xl lg:text-base'>
+          Connect Wallet
+        </Button>
+         ): (
+          <Button type="button" onClick={ handleModal} className='rounded-lg bg-light text-pink lg:text-light lg:bg-pink px-7 py-3.5 text-2xl lg:text-base'>
+          Connect Wallet
+        </Button>
+         )
+      }
+      </MediaQuery>
     </nav>
   )
 }
