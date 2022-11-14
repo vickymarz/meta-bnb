@@ -17,7 +17,8 @@ const Homepage = () => {
     useEffect(() => {
         const newDatas = datas.slice(0, 8)
         setDatas(newDatas)
-    }, [locations]);
+         // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleModal = () => {
       setModal(!modal)
