@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const Navbar = ({setModal, menuOpen, handleMenuOpen}) => {
-  console.log(menuOpen)
     const nav = [
         {
           id: 1,

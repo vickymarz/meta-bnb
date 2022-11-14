@@ -11,7 +11,11 @@ module.exports = {
       'light': '#ffffff',
       'darkk': '#1d1d1e',
       'skylight': '#f1f3f9',
-      'lightergray': '#b4b4b4'
+      'lightergray': '#b4b4b4',
+      'dimwhite': '#404040',
+      'darkgray': '#333333',
+      'midgray': '#CFD8DC',
+      'verylightgray': '#F8F9FA'
     },
     extend: {},
   },
